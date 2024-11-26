@@ -1,3 +1,6 @@
+/* Напишите метод sumDigits, который принимает 
+целое число n и возвращает сумму его цифр. */
+
 package lesson_1.task3;
 
 public class Task {
