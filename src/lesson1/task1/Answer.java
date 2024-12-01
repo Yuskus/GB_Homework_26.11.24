@@ -1,4 +1,4 @@
-package lesson_1.task1;
+package lesson1.task1;
 
 class Answer {
     int factorial(int n) {

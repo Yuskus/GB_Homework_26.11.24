@@ -1,7 +1,7 @@
 /* Напишите метод factorial, который принимает число n и 
 возвращает его факториал. Если n < 0, метод должен вернуть -1. */
 
-package lesson_1.task1;
+package lesson1.task1;
 
 public class Task {
     public static void main(String[] args) {

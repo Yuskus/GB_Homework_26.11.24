@@ -1,4 +1,4 @@
-package lesson_1.task3;
+package lesson1.task3;
 
 public class Answer {
     int sumDigits(int n) {

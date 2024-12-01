@@ -1,4 +1,4 @@
-package lesson_1.task2;
+package lesson1.task2;
 
 class Answer {
     void printEvenNums() {

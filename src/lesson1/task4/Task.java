@@ -4,7 +4,7 @@
     2. Функция findMaxOfThree должна принимать три числа и находить 
         максимальное из них, используя первую функцию. */
 
-package lesson_1.task4;
+package lesson1.task4;
 
 public class Task {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package lesson_1.task4;
+package lesson1.task4;
 
 public class Answer {
     int findMaxOfTwo(int a, int b) {
