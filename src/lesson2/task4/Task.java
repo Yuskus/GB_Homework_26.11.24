@@ -5,56 +5,29 @@
 
 package lesson2.task4;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+
 public class Task {
     public static void main(String[] args) {
-
+        int[] arr;
+        if (args.length == 1) {
+            arr = Arrays.stream(args[0].split(",")).mapToInt(Integer::parseInt).toArray();
+        } else {
+            arr = new int[] { 9, 4, 8, 3, 1 };
+        }
+        ArrayOperations ans = new ArrayOperations();
+        ans.findMinMax(arr);
+        // Проверка:
+        try (BufferedReader br = new BufferedReader(new FileReader(ans.getLogFileName()))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            System.out.println("Ошибка при чтении файла: " + e.getMessage());
+        }
     }
 }
-
-/*
- * import java.io.File;
- * import java.io.FileWriter;
- * import java.io.FileReader;
- * import java.io.BufferedReader;
- * import java.io.IOException;
- * import java.text.SimpleDateFormat;
- * import java.util.Date;
- * class ArrayOperations {
- * private static File log;
- * private static FileWriter fileWriter;
- * public static void findMinMax(int[] arr) {
- * // Реализуйте метод для поиска минимального и
- * максимального элемента
- * }
- * private static void logStep(int min, int max) {
- * // Реализуйте метод для записи состояния в лог-файл
- * }
- * }
- * // Не удаляйте этот класс-он нужен для вывода результатов на
- * экран и проверки
- * public class Printer {
- * public static void main(String[] args) {
- * int[] arr = {};
- * // При отправке кода на Выполнение, вы можете
- * варьировать эти параметры
- * if (args.length == 0) {
- * arr = new int[]{9, 4, 8, 3, 1};
- * } else {
- * arr = Arrays.stream(args[0].split(", "))
- * .mapToInt(Integer::parseInt)
- * .toArray();
- * }
- * ArrayOperations ans = new ArrayOperations();
- * ans.findMinMax(arr);
- * try (BufferedReader br = new BufferedReader(new
- * FileReader("log.txt"))) {
- * String line;
- * while ((line = br.readLine()) != null) {
- * System.out.println(line);
- * }
- * } catch (IOException e) {
- * e.printStackTrace();
- * }
- * }
- * }
- */

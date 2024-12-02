@@ -5,30 +5,9 @@ package lesson2.task3;
 
 public class Task {
     public static void main(String[] args) {
-
+        String text = args.length > 0 ? args[0] : "line1\n\nline2\n\nline3";
+        TextCleaner ans = new TextCleaner();
+        String result = ans.removeEmptyLines(text);
+        System.out.println(result != null ? result : "Произошла ошибка.");
     }
 }
-
-/*
- * class TextCleaner {
- * public static String removeEmptyLines(String text) {
- * // Введите свое решение ниже
- * }
- * }
- * // Не удаляйте этот класс-он нужен для вывода результатов на
- * экран и проверки
- * public class Printer {
- * public static void main(String[] args) {
- * String text = "";
- * if (args.length == 0) {
- * // При отправке кода на Выполнение, вы можете
- * варьировать эти параметры
- * text = "line1\n\nline2\n\nline3";
- * } else {
- * text = args[0];
- * }
- * TextCleaner ans = new TextCleaner();
- * System.out.println(ans.removeEmptyLines(text));
- * }
- * }
- */
