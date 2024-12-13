@@ -1,0 +1,247 @@
+TODO:
+сделать коллекцию ноутов
+сделать инициализацию ноутов
+сделать метод ту стринг для ноута
+сделать методы КОПИ для *-инфо
+решить наконец задачу
+
+Folders:
+
+Objects [
+  Parts [
+    Sructures (
+      OperationSystem, 
+      Slots, 
+      Languages
+      Vector3
+    )
+  ] (
+    DisplayInfo.java, 
+    MemoryInfo.java, 
+    GraphicProcessorInfo.java, 
+    ProcessorInfo.java, 
+    CommunicationInfo.java, 
+    MultimediaInfo.java,
+    InputDevicesInfo.java,
+    BatteryInfo.java,
+    SizeInfo.java
+  )
+] (
+  LaptopCollection.java, 
+  Laptop.java
+),
+Init (
+  CollectionInitialization.java
+)
+
+---
+
+> class CollectionInitialization
+
+> class NotebookCollection
+
+> class Laptop
+> > class DisplayInfo
+> > class MemoryInfo
+> > class GraphicProcessorInfo
+> > class ProcessorInfo
+> > class CommunicationInfo
+> > class MultimediaInfo
+> > class InputDevicesInfo
+> > class BatteryInfo
+> > class SizeInfo
+
+> enum OperationSystem [ None, Windows 7, Windows 8, Windows 10, Windows 11, Linux ]
+> enum Slots [ USB_2_0_TypeA, USB_3_0_TypeA, USB_3_0_TypeC, HDMI, TRS_MINI_JACK, TRRS_MINI_JACK ]
+> enum Languages [ EN, RU/EN ]
+> class Vector3 (x, y, z)
+
+--- Общая информация ---
+
+Бренд HUAWEI
+Модель MateBook D 16
+Год релиза 2023
+ОС - без ОС
+Материал корпуса металл
+Цвет серый
+
+class Laptop:
+
+String Brand;
+String Model;
+Integer ReleaseYear;
+enum OperationSystem;
+String BodyMaterial;
+Color Color;
+
+DisplayInfo Display;
+MemoryInfo Memory;
+GraphicProcessorInfo GraphicProcessor;
+ProcessorInfo Processor;
+CommunicationInfo Communication;
+MultimediaInfo Multimedia;
+InputDevicesInfo InputDevices;
+BatteryInfo Battery;
+SizeInfo Size;
+
+--- Экран ---
+
+Диагональ 16
+Высота пиксели 1200
+Ширина пиксели 1920
+Частота обновления 60 Гц
+Поверхность экрана матовая
+Тип матрицы IPS
+Плотность пикселей 142 PPI
+Соотношение сторон 16:10
+
+class DisplayInfo
+
+public Float Diagonal;
+public Integer HeigthPx;
+public Integer WeigthPx;
+public Integer RefreshRateHz;
+public String Surface;
+public String Matrix;
+public Integer PPI;
+public String AspectRatio;
+
+--- Память ---
+
+Оперативная память 16 ГБ
+Постоянная память 1024 ГБ
+Возможность апгрейда оперативной памяти - нет
+Возможность апгрейда постоянной памяти - нет
+Тип диска SSD
+
+class MemoryInfo
+
+public Integer RAM;
+public Integer ROM;
+public boolean canUpgradeRAM;
+public boolean canUpgradeROM;
+public String ROMType;
+
+--- Графический процессор ---
+
+Бренд Intel
+Модель UHD Graphics
+
+class GraphicProcessorInfo
+
+public String Brand;
+public String Model;
+
+--- Процессор ---
+
+Бренд Intel
+Модель Core i5 12450H
+Частота средняя - 2 ГГц
+Частота Turbo - 4.4 ГГц
+Количество ядер процессора 8
+Количество энергоэффективных ядер 4
+Количество высокопроизводительных ядер 4
+Максимальное число потоков 12
+
+class ProcessorInfo
+
+public String Brand;
+public String Model;
+public Float MiddleFrequency;
+public Float TurboFrequency;
+public Integer AllCores;
+public Integer EnergyEfficientCores;
+public Integer HighPerformanceCores;
+public Integer MaxThreads;
+
+--- Связь ---
+
+Поддержка технологии Wi-Fi есть
+Тип связи Wi-Fi - 802.11 a/b/g/n/ac/ax
+Поддержка технологии Bluetooth есть
+Версия Bluetooth v5.1
+
+class CommunicationInfo
+
+public boolean isWiFi;
+public String WiFiType;
+public boolean isBluetooth;
+public Float BluetoothVersion;
+
+--- Разъёмы ---
+
+Порты USB 2.0 (Type-A) 1
+Порты USB 3.0 (Type-A) 1
+Порты USB 3.0 (Type-C) 1
+Разъем HDMI 1
+
+List<Slots> SlotsInfo (Slots - enum)
+
+USB_2_0_TypeA
+USB_3_0_TypeA
+USB_3_0_TypeC
+HDMI
+TRS_MINI_JACK
+TRRS_MINI_JACK
+
+--- Мультимедиа ---
+
+Веб-камера встроенная - есть
+Разрешение веб-камеры 0.9 Мп
+Динамики - да
+Стерео - да
+Количество микрофонов 2
+
+class MultimediaInfo
+
+public boolean isWebCam;
+public Float WebCamMP;
+public boolean isSpeakers;
+public boolean isSpeakersStereo;
+public Integer MicCount;
+
+--- Устройства ввода ---
+
+Язык клавиатуры RU/EN
+Цвет клавиатуры черный
+Цифровой блок есть
+Подсветка клавиш нет
+Touchpad есть
+Отпечаток пальца есть
+
+class InputDevicesInfo
+
+public enum KeyboardLanguage;
+public Color KeyboardColor;
+public boolean isNumPad;
+public boolean KeyBacklight;
+public boolean isTouchpad;
+public boolean isFingerprint;
+
+--- Батарея ---
+
+Тип батареи Li-Pol
+Энергоемкость 56 Wh
+Функция быстрой зарядки есть
+Выходная мощность адаптера питания 65 Вт
+
+class BatteryInfo
+
+public String Type;
+public Integer PowerWH;
+public boolean SpeedCharge;
+public Integer OutputPowerW;
+
+--- Размер ---
+
+Размер (XYZ) 356.7 х 248.7 х 17. мм
+Размер в упаковке (XYZ) - 520 x 320 x 61 мм
+Вес 1.72 кг
+Вес в упаковке 2.5 кг
+
+class SizeInfo
+
+public Vector VolumeNetto;
+public Vector VolumeBrutto;
+public Float WeigthNetto;
+public Float WeigthBrutto;
