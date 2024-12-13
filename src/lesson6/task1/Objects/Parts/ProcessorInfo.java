@@ -1,14 +1,14 @@
 package lesson6.task1.Objects.Parts;
 
 public class ProcessorInfo {
-    public String Brand;
-    public String Model;
-    public Float MiddleFrequency;
-    public Float MaxFrequency;
-    public Integer AllCores;
-    public Integer EnergyEfficientCores;
-    public Integer HighPerformanceCores;
-    public Integer MaxThreads;
+    private String Brand;
+    private String Model;
+    private Float MiddleFrequency;
+    private Float MaxFrequency;
+    private Integer AllCores;
+    private Integer EnergyEfficientCores;
+    private Integer HighPerformanceCores;
+    private Integer MaxThreads;
 
     public ProcessorInfo(String brand, String model) {
         Brand = brand;
@@ -50,6 +50,43 @@ public class ProcessorInfo {
         EnergyEfficientCores = energyEfficientCores;
         HighPerformanceCores = highPerformanceCores;
         MaxThreads = maxThreads;
+    }
+
+    public String getBrand() {
+        return Brand;
+    }
+
+    public String getModel() {
+        return Model;
+    }
+
+    public Float getMidFreq() {
+        return MiddleFrequency;
+    }
+
+    public Float getMaxFreq() {
+        return MaxFrequency;
+    }
+
+    public Integer getAllCores() {
+        return AllCores;
+    }
+
+    public Integer getEnergyEfficientCores() {
+        return EnergyEfficientCores;
+    }
+
+    public Integer getHighPerformanceCores() {
+        return HighPerformanceCores;
+    }
+
+    public Integer getMaxThreads() {
+        return MaxThreads;
+    }
+
+    public ProcessorInfo getCopy() {
+        return new ProcessorInfo(Brand, Model, AllCores, MiddleFrequency, MaxFrequency, EnergyEfficientCores,
+                HighPerformanceCores, MaxThreads);
     }
 
     @Override

@@ -1,11 +1,11 @@
 package lesson6.task1.Objects.Parts;
 
 public class MultimediaInfo {
-    public boolean IsWebCam = false;
-    public Float WebCamMP;
-    public boolean IsSpeakers = false;
-    public boolean IsSpeakersStereo = false;
-    public Integer MicCount = 0;
+    private boolean IsWebCam = false;
+    private Float WebCamMP;
+    private boolean IsSpeakers = false;
+    private boolean IsSpeakersStereo = false;
+    private Integer MicCount = 0;
 
     public MultimediaInfo(boolean isWebCam, boolean isSpeakers) {
         IsWebCam = isWebCam;
@@ -30,6 +30,30 @@ public class MultimediaInfo {
         IsSpeakers = true;
         IsSpeakersStereo = isSpeakersStereo;
         MicCount = micCount;
+    }
+
+    public boolean getIsWebCam() {
+        return IsWebCam;
+    }
+
+    public Float getWebCamMP() {
+        return WebCamMP;
+    }
+
+    public boolean getIsSpeakers() {
+        return IsSpeakers;
+    }
+
+    public boolean getIsSpeakersStereo() {
+        return IsSpeakersStereo;
+    }
+
+    public Integer getMicCount() {
+        return MicCount;
+    }
+
+    public MultimediaInfo getCopy() {
+        return new MultimediaInfo(WebCamMP, IsSpeakersStereo, MicCount);
     }
 
     @Override

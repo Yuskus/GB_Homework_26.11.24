@@ -1,9 +1,9 @@
 package lesson6.task1.Objects.Parts;
 
 public class BatteryInfo {
-    public String Type;
-    public Integer PowerWH;
-    public boolean IsSpeedCharge = false;
+    private String Type;
+    private Integer PowerWH;
+    private boolean IsSpeedCharge = false;
 
     public BatteryInfo() {
 
@@ -18,6 +18,22 @@ public class BatteryInfo {
         Type = type;
         PowerWH = powerWH;
         IsSpeedCharge = isSpeedCharge;
+    }
+
+    public String getBatteryType() {
+        return Type;
+    }
+
+    public Integer getPowerWH() {
+        return PowerWH;
+    }
+
+    public boolean getIsSpeedCharge() {
+        return IsSpeedCharge;
+    }
+
+    public BatteryInfo getCopy() {
+        return new BatteryInfo(Type, PowerWH, IsSpeedCharge);
     }
 
     @Override

@@ -8,40 +8,46 @@ import lesson6.task1.Objects.Parts.Structures.OperationSystem;
 import lesson6.task1.Objects.Parts.Structures.Slots;
 
 public class Laptop {
-    public String Brand;
-    public String Model;
-    public Integer ReleaseYear;
-    public OperationSystem OS = OperationSystem.NONE;
-    public String BodyMaterial;
-    public Color Color;
-    public DisplayInfo Display;
-    public MemoryInfo Memory;
-    public GraphicProcessorInfo GraphicProcessor;
-    public ProcessorInfo Processor;
-    public CommunicationInfo Communication;
-    public MultimediaInfo Multimedia;
-    public InputDevicesInfo InputDevices;
-    public BatteryInfo Battery;
-    public SizeInfo Size;
-    public List<Slots> SlotsInfo = new ArrayList<>();
-
-    public Laptop() {
-
-    }
+    private static int UniqId;
+    private int Id;
+    private String Brand;
+    private String Model;
+    private Integer ReleaseYear;
+    private OperationSystem OS = OperationSystem.NONE;
+    private String BodyMaterial;
+    private Color Color;
+    private DisplayInfo Display;
+    private MemoryInfo Memory;
+    private GraphicProcessorInfo GraphicProcessor;
+    private ProcessorInfo Processor;
+    private CommunicationInfo Communication;
+    private MultimediaInfo Multimedia;
+    private InputDevicesInfo InputDevices;
+    private BatteryInfo Battery;
+    private SizeInfo Size;
+    private List<Slots> SlotsInfo = new ArrayList<>();
 
     public Laptop(String brand, String model) {
         setBrandAndModel(brand, model);
+        generateUniqId();
     }
 
     public Laptop(String brand, String model, OperationSystem os) {
         setBrandAndModel(brand, model);
         setOS(os);
+        generateUniqId();
     }
 
     public Laptop(String brand, String model, OperationSystem os, String bodyMaterial, Color color) {
         setBrandAndModel(brand, model);
         setOS(os);
         setMaterialAndColor(bodyMaterial, color);
+        generateUniqId();
+    }
+
+    private synchronized void generateUniqId() {
+        UniqId++;
+        Id = UniqId;
     }
 
     public void setBrandAndModel(String brand, String model) {
@@ -112,12 +118,20 @@ public class Laptop {
         SlotsInfo.clear();
     }
 
+    public Integer getId() {
+        return Id;
+    }
+
     public String getBrand() {
         return Brand;
     }
 
     public String getModel() {
         return Model;
+    }
+
+    public Integer getReleaseYear() {
+        return ReleaseYear;
     }
 
     public OperationSystem getOS() {
@@ -172,7 +186,7 @@ public class Laptop {
         return new ArrayList<Slots>(SlotsInfo);
     }
 
-    public Laptop GetCopy() {
+    public Laptop getCopy() {
         var result = new Laptop(Brand, Model, OS, BodyMaterial, Color);
         result.setDisplay(Display);
         result.setMemory(Memory);
@@ -185,5 +199,47 @@ public class Laptop {
         result.setSizeInfo(Size);
         result.addSlotsRange(SlotsInfo);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Brand: ").append(Brand);
+        sb.append(", Model: ").append(Model);
+
+        if (ReleaseYear != null)
+            sb.append(", Release: ").append(ReleaseYear);
+
+        sb.append(", OS: ").append(OS);
+
+        if (Color != null)
+            sb.append(", Color").append(Color);
+        if (BodyMaterial != null)
+            sb.append(", Material: ").append(BodyMaterial);
+
+        if (Display != null)
+            sb.append(", Display: ").append(Display);
+        if (Memory != null)
+            sb.append(", Memory: ").append(Memory);
+        if (GraphicProcessor != null)
+            sb.append(", Graphic Processor: ").append(GraphicProcessor);
+        if (Processor != null)
+            sb.append(", Processor: ").append(Processor);
+        if (Communication != null)
+            sb.append(", Communication: ").append(Communication);
+        if (Multimedia != null)
+            sb.append(", Multimedia: ").append(Multimedia);
+        if (InputDevices != null)
+            sb.append(", nputDevices: ").append(InputDevices);
+        if (Battery != null)
+            sb.append(", Battery: ").append(Battery);
+        if (Size != null)
+            sb.append(", Size: ").append(Size);
+
+        if (SlotsInfo != null)
+            sb.append(", Slots: ").append(SlotsInfo);
+
+        return sb.toString();
     }
 }

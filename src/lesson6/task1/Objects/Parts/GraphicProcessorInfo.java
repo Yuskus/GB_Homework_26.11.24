@@ -1,8 +1,8 @@
 package lesson6.task1.Objects.Parts;
 
 public class GraphicProcessorInfo {
-    public String Brand;
-    public String Model;
+    private String Brand;
+    private String Model;
 
     public GraphicProcessorInfo() {
 
@@ -15,6 +15,18 @@ public class GraphicProcessorInfo {
     public GraphicProcessorInfo(String brand, String model) {
         Brand = brand;
         Model = model;
+    }
+
+    public String getBrand() {
+        return Brand;
+    }
+
+    public String getModel() {
+        return Model;
+    }
+
+    public GraphicProcessorInfo getCopy() {
+        return new GraphicProcessorInfo(Brand, Model);
     }
 
     @Override

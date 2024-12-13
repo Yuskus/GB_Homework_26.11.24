@@ -3,10 +3,10 @@ package lesson6.task1.Objects.Parts;
 import lesson6.task1.Objects.Parts.Structures.Vector3;
 
 public class SizeInfo {
-    public Vector3 VolumeNetto;
-    public Vector3 VolumeBrutto;
-    public Float WeigthNetto;
-    public Float WeigthBrutto;
+    private Vector3 VolumeNetto;
+    private Vector3 VolumeBrutto;
+    private Float WeigthNetto;
+    private Float WeigthBrutto;
 
     public SizeInfo(Vector3 volumeNetto) {
         VolumeNetto = volumeNetto;
@@ -33,6 +33,26 @@ public class SizeInfo {
         WeigthNetto = weigthNetto;
         VolumeBrutto = volumeBrutto;
         WeigthBrutto = weigthBrutto;
+    }
+
+    public Vector3 getVolumeNetto() {
+        return VolumeNetto;
+    }
+
+    public Vector3 getVolumeBrutto() {
+        return VolumeBrutto;
+    }
+
+    public Float getWeigthNetto() {
+        return WeigthNetto;
+    }
+
+    public Float getWeigthBrutto() {
+        return WeigthBrutto;
+    }
+
+    public SizeInfo getCopy() {
+        return new SizeInfo(VolumeNetto, WeigthNetto, VolumeBrutto, WeigthBrutto);
     }
 
     @Override

@@ -4,12 +4,12 @@ import java.awt.Color;
 import lesson6.task1.Objects.Parts.Structures.KeyboardLanguages;
 
 public class InputDevicesInfo {
-    public KeyboardLanguages Language = KeyboardLanguages.EN;
-    public Color KeyboardColor;
-    public boolean IsNumPad = false;
-    public boolean IsTouchpad = false;
-    public boolean IsKeyBacklight = false;
-    public boolean IsFingerprint = false;
+    private KeyboardLanguages Language = KeyboardLanguages.EN;
+    private Color KeyboardColor;
+    private boolean IsNumPad = false;
+    private boolean IsTouchpad = false;
+    private boolean IsKeyBacklight = false;
+    private boolean IsFingerprint = false;
 
     public InputDevicesInfo(Color keyboardColor) {
         KeyboardColor = keyboardColor;
@@ -35,6 +35,34 @@ public class InputDevicesInfo {
         IsTouchpad = isTouchpad;
         IsKeyBacklight = isKeyBacklight;
         IsFingerprint = isFingerprint;
+    }
+
+    public KeyboardLanguages getLanguage() {
+        return Language;
+    }
+
+    public Color getKeyboardColor() {
+        return KeyboardColor;
+    }
+
+    public boolean getIsNumPad() {
+        return IsNumPad;
+    }
+
+    public boolean getIsTouchpad() {
+        return IsTouchpad;
+    }
+
+    public boolean getIsKeyBacklight() {
+        return IsKeyBacklight;
+    }
+
+    public boolean getIsFingerprint() {
+        return IsFingerprint;
+    }
+
+    public InputDevicesInfo getCopy() {
+        return new InputDevicesInfo(KeyboardColor, Language, IsNumPad, IsTouchpad, IsKeyBacklight, IsFingerprint);
     }
 
     @Override

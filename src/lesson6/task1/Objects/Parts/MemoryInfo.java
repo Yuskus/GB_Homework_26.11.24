@@ -1,11 +1,11 @@
 package lesson6.task1.Objects.Parts;
 
 public class MemoryInfo {
-    public Integer RAM;
-    public Integer ROM;
-    public boolean CanUpgradeRAM = false;
-    public boolean CanUpgradeROM = false;
-    public String ROMType;
+    private Integer RAM;
+    private Integer ROM;
+    private boolean CanUpgradeRAM = false;
+    private boolean CanUpgradeROM = false;
+    private String ROMType;
 
     public MemoryInfo(Integer ram, Integer rom) {
         RAM = ram;
@@ -24,6 +24,30 @@ public class MemoryInfo {
         ROMType = romType;
         CanUpgradeRAM = canUpgradeRAM;
         CanUpgradeROM = canUpgradeROM;
+    }
+
+    public Integer getRAM() {
+        return RAM;
+    }
+
+    public Integer getROM() {
+        return ROM;
+    }
+
+    public boolean getCanUpgradeRAM() {
+        return CanUpgradeRAM;
+    }
+
+    public boolean getCanUpgradeROM() {
+        return CanUpgradeROM;
+    }
+
+    public String getROMType() {
+        return ROMType;
+    }
+
+    public MemoryInfo getCopy() {
+        return new MemoryInfo(RAM, ROM, ROMType, CanUpgradeRAM, CanUpgradeROM);
     }
 
     @Override

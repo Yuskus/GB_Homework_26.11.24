@@ -1,13 +1,13 @@
 package lesson6.task1.Objects.Parts;
 
 public class DisplayInfo {
-    public Float Diagonal;
-    public Integer HeigthPx;
-    public Integer WeigthPx;
-    public Integer PPI;
-    public String Matrix;
-    public Integer RefreshRateHz;
-    public boolean IsSurfaceMatte = true;
+    private Float Diagonal;
+    private Integer HeigthPx;
+    private Integer WeigthPx;
+    private Integer PPI;
+    private String Matrix;
+    private Integer RefreshRateHz;
+    private boolean IsSurfaceMatte = true;
 
     public DisplayInfo(Float diagonal, Integer heigthPx, Integer weigthPx) {
         Diagonal = diagonal;
@@ -44,8 +44,40 @@ public class DisplayInfo {
         IsSurfaceMatte = isSurfaceMatte;
     }
 
-    int CountPPI(Float diagonal, Integer heigthPx, Integer weigthPx) {
+    public static int CountPPI(Float diagonal, Integer heigthPx, Integer weigthPx) {
         return (int) (Math.sqrt((weigthPx * weigthPx) + (heigthPx * heigthPx)) / diagonal);
+    }
+
+    public Float getDiagonal() {
+        return Diagonal;
+    }
+
+    public Integer getHeigthPx() {
+        return HeigthPx;
+    }
+
+    public Integer getWeigthPx() {
+        return WeigthPx;
+    }
+
+    public Integer getPPI() {
+        return PPI;
+    }
+
+    public String getMatrix() {
+        return Matrix;
+    }
+
+    public Integer getRefreshRateHz() {
+        return RefreshRateHz;
+    }
+
+    public boolean getIsSurfaceMatte() {
+        return IsSurfaceMatte;
+    }
+
+    public DisplayInfo getCopy() {
+        return new DisplayInfo(Diagonal, HeigthPx, WeigthPx, Matrix, RefreshRateHz, IsSurfaceMatte);
     }
 
     @Override

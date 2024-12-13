@@ -1,10 +1,10 @@
 package lesson6.task1.Objects.Parts;
 
 public class CommunicationInfo {
-    public boolean IsWiFi = false;
-    public String WiFiType;
-    public boolean IsBluetooth = false;
-    public Float BluetoothVersion;
+    private boolean IsWiFi = false;
+    private String WiFiType;
+    private boolean IsBluetooth = false;
+    private Float BluetoothVersion;
 
     public CommunicationInfo() {
 
@@ -25,6 +25,26 @@ public class CommunicationInfo {
         IsWiFi = true;
         BluetoothVersion = bluetoothVersion;
         IsBluetooth = true;
+    }
+
+    public boolean getIsWiFi() {
+        return IsWiFi;
+    }
+
+    public String getWiFiType() {
+        return WiFiType;
+    }
+
+    public boolean getIsBluetooth() {
+        return IsBluetooth;
+    }
+
+    public Float getBluetoothVersion() {
+        return BluetoothVersion;
+    }
+
+    public CommunicationInfo getCopy() {
+        return new CommunicationInfo(WiFiType, BluetoothVersion);
     }
 
     @Override
