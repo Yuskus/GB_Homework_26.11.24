@@ -45,6 +45,15 @@ public class Laptop {
         generateUniqId();
     }
 
+    public Laptop(String brand, String model, Integer releazeYear, OperationSystem os, String bodyMaterial,
+            Color color) {
+        setBrandAndModel(brand, model);
+        setReleaseYear(releazeYear);
+        setOS(os);
+        setMaterialAndColor(bodyMaterial, color);
+        generateUniqId();
+    }
+
     private synchronized void generateUniqId() {
         UniqId++;
         Id = UniqId;

@@ -2,6 +2,28 @@ TODO:
 сделать инициализацию ноутов
 решить наконец задачу
 
+---
+
+1) хуавей 16
+2) хуавей 14
+3) эпл
+4) хонор
+5) азус
+6) асер
+7) хп
+8) мси
+
+1) https://www.citilink.ru/product/noutbuk-huawei-matebook-d-16-53013yly-16-2024-ips-intel-core-i5-12450h-2002220/properties/
+2) https://www.citilink.ru/product/noutbuk-huawei-matebook-d-14-53013xet-14-2024-ips-intel-core-i5-12450h-2002275/
+3) https://www.citilink.ru/product/noutbuk-apple-macbook-pro-a2780-m2-pro-12-core-16gb-ssd1tb-19-core-gpu-2053513/
+4) https://www.citilink.ru/product/noutbuk-honor-magicbook-14-nmh-wdq9hn-5301afvh-14-ips-amd-ryzen-5-5500-1969091/
+5) https://www.citilink.ru/product/noutbuk-asus-vivobook-x1502za-bq2345-i7-12700h-16gb-ssd512gb-15-6-ips-2024757/
+6) https://www.citilink.ru/product/noutbuk-acer-extensa-15-ex215-23-r62l-nx-eh3cd-00d-15-6-ips-amd-ryzen-1987027/
+7) https://www.citilink.ru/product/noutbuk-hp-15s-fq5035ny-i7-1255u-8gb-ssd512gb-15-6-ips-fhd-dos3-0-blac-1882364/
+8) https://www.citilink.ru/product/noutbuk-msi-modern-15-h-b13m-099ru-i7-13700h-16gb-ssd512gb-15-6-ips-fh-2011211/
+
+---
+
 Folders:
 
 Objects [
