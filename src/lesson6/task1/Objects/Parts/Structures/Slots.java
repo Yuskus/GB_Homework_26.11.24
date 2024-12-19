@@ -6,5 +6,6 @@ public enum Slots {
     USB_3_0_TypeC,
     HDMI,
     TRS_MINI_JACK,
-    TRRS_MINI_JACK
+    TRRS_MINI_JACK,
+    THUNDERBOLT_4
 }
