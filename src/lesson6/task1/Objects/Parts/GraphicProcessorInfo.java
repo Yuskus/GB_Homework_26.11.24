@@ -1,23 +1,25 @@
 package lesson6.task1.Objects.Parts;
 
+import lesson6.task1.Objects.Parts.Structures.Brands;
+
 public class GraphicProcessorInfo {
-    private String Brand;
+    private Brands Brand;
     private String Model;
 
     public GraphicProcessorInfo() {
 
     }
 
-    public GraphicProcessorInfo(String brand) {
+    public GraphicProcessorInfo(Brands brand) {
         Brand = brand;
     }
 
-    public GraphicProcessorInfo(String brand, String model) {
+    public GraphicProcessorInfo(Brands brand, String model) {
         Brand = brand;
         Model = model;
     }
 
-    public String getBrand() {
+    public Brands getBrand() {
         return Brand;
     }
 

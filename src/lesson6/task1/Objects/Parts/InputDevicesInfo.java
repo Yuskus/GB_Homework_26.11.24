@@ -1,33 +1,33 @@
 package lesson6.task1.Objects.Parts;
 
-import java.awt.Color;
+import lesson6.task1.Objects.Parts.Structures.Colors;
 import lesson6.task1.Objects.Parts.Structures.KeyboardLanguages;
 
 public class InputDevicesInfo {
     private KeyboardLanguages Language = KeyboardLanguages.EN;
-    private Color KeyboardColor;
+    private Colors KeyboardColor;
     private boolean IsNumPad = false;
     private boolean IsTouchpad = false;
     private boolean IsKeyBacklight = false;
     private boolean IsFingerprint = false;
 
-    public InputDevicesInfo(Color keyboardColor) {
+    public InputDevicesInfo(Colors keyboardColor) {
         KeyboardColor = keyboardColor;
     }
 
-    public InputDevicesInfo(Color keyboardColor, KeyboardLanguages language) {
+    public InputDevicesInfo(Colors keyboardColor, KeyboardLanguages language) {
         KeyboardColor = keyboardColor;
         Language = language;
     }
 
-    public InputDevicesInfo(Color keyboardColor, KeyboardLanguages language, boolean isNumPad, boolean isTouchpad) {
+    public InputDevicesInfo(Colors keyboardColor, KeyboardLanguages language, boolean isNumPad, boolean isTouchpad) {
         KeyboardColor = keyboardColor;
         Language = language;
         IsNumPad = isNumPad;
         IsTouchpad = isTouchpad;
     }
 
-    public InputDevicesInfo(Color keyboardColor, KeyboardLanguages language, boolean isNumPad, boolean isTouchpad,
+    public InputDevicesInfo(Colors keyboardColor, KeyboardLanguages language, boolean isNumPad, boolean isTouchpad,
             boolean isKeyBacklight, boolean isFingerprint) {
         KeyboardColor = keyboardColor;
         Language = language;
@@ -41,7 +41,7 @@ public class InputDevicesInfo {
         return Language;
     }
 
-    public Color getKeyboardColor() {
+    public Colors getKeyboardColor() {
         return KeyboardColor;
     }
 

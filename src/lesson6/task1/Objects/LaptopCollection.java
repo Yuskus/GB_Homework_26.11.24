@@ -23,4 +23,11 @@ public class LaptopCollection {
 
         return laptops;
     }
+
+    public void printCollection(String aboutInfo) {
+        System.out.println(aboutInfo);
+        for (Laptop laptop : laptopCollection) {
+            System.out.println(laptop.toString());
+        }
+    }
 }

@@ -1,7 +1,9 @@
 package lesson6.task1.Objects.Parts;
 
+import lesson6.task1.Objects.Parts.Structures.BatteryTypes;
+
 public class BatteryInfo {
-    private String Type;
+    private BatteryTypes Type;
     private Integer PowerWH;
     private boolean IsSpeedCharge = false;
 
@@ -9,18 +11,18 @@ public class BatteryInfo {
 
     }
 
-    public BatteryInfo(String type, Integer powerWH) {
+    public BatteryInfo(BatteryTypes type, Integer powerWH) {
         Type = type;
         PowerWH = powerWH;
     }
 
-    public BatteryInfo(String type, Integer powerWH, boolean isSpeedCharge) {
+    public BatteryInfo(BatteryTypes type, Integer powerWH, boolean isSpeedCharge) {
         Type = type;
         PowerWH = powerWH;
         IsSpeedCharge = isSpeedCharge;
     }
 
-    public String getBatteryType() {
+    public BatteryTypes getBatteryType() {
         return Type;
     }
 

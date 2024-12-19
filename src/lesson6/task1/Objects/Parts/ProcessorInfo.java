@@ -1,7 +1,9 @@
 package lesson6.task1.Objects.Parts;
 
+import lesson6.task1.Objects.Parts.Structures.Brands;
+
 public class ProcessorInfo {
-    private String Brand;
+    private Brands Brand;
     private String Model;
     private Float MiddleFrequency;
     private Float MaxFrequency;
@@ -10,18 +12,18 @@ public class ProcessorInfo {
     private Integer HighPerformanceCores;
     private Integer MaxThreads;
 
-    public ProcessorInfo(String brand, String model) {
+    public ProcessorInfo(Brands brand, String model) {
         Brand = brand;
         Model = model;
     }
 
-    public ProcessorInfo(String brand, String model, Integer allCores) {
+    public ProcessorInfo(Brands brand, String model, Integer allCores) {
         Brand = brand;
         Model = model;
         AllCores = allCores;
     }
 
-    public ProcessorInfo(String brand, String model, Integer allCores, Float middleFrequency, Float maxFrequency) {
+    public ProcessorInfo(Brands brand, String model, Integer allCores, Float middleFrequency, Float maxFrequency) {
         Brand = brand;
         Model = model;
         AllCores = allCores;
@@ -29,7 +31,7 @@ public class ProcessorInfo {
         MaxFrequency = maxFrequency;
     }
 
-    public ProcessorInfo(String brand, String model, Integer allCores, Float middleFrequency, Float maxFrequency,
+    public ProcessorInfo(Brands brand, String model, Integer allCores, Float middleFrequency, Float maxFrequency,
             Integer energyEfficientCores, Integer highPerformanceCores) {
         Brand = brand;
         Model = model;
@@ -40,7 +42,7 @@ public class ProcessorInfo {
         HighPerformanceCores = highPerformanceCores;
     }
 
-    public ProcessorInfo(String brand, String model, Integer allCores, Float middleFrequency, Float maxFrequency,
+    public ProcessorInfo(Brands brand, String model, Integer allCores, Float middleFrequency, Float maxFrequency,
             Integer energyEfficientCores, Integer highPerformanceCores, Integer maxThreads) {
         Brand = brand;
         Model = model;
@@ -52,7 +54,7 @@ public class ProcessorInfo {
         MaxThreads = maxThreads;
     }
 
-    public String getBrand() {
+    public Brands getBrand() {
         return Brand;
     }
 

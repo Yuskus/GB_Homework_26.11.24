@@ -1,21 +1,22 @@
 package lesson6.task1.Objects;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import lesson6.task1.Objects.Parts.*;
+import lesson6.task1.Objects.Parts.Structures.Brands;
+import lesson6.task1.Objects.Parts.Structures.Colors;
 import lesson6.task1.Objects.Parts.Structures.OperationSystem;
 import lesson6.task1.Objects.Parts.Structures.Slots;
 
 public class Laptop {
     private static int UniqId;
     private int Id;
-    private String Brand;
+    private Brands Brand;
     private String Model;
     private Integer ReleaseYear;
     private OperationSystem OS = OperationSystem.NONE;
     private String BodyMaterial;
-    private Color Color;
+    private Colors Color;
     private DisplayInfo Display;
     private MemoryInfo Memory;
     private GraphicProcessorInfo GraphicProcessor;
@@ -27,26 +28,26 @@ public class Laptop {
     private SizeInfo Size;
     private List<Slots> SlotsInfo = new ArrayList<>();
 
-    public Laptop(String brand, String model) {
+    public Laptop(Brands brand, String model) {
         setBrandAndModel(brand, model);
         generateUniqId();
     }
 
-    public Laptop(String brand, String model, OperationSystem os) {
+    public Laptop(Brands brand, String model, OperationSystem os) {
         setBrandAndModel(brand, model);
         setOS(os);
         generateUniqId();
     }
 
-    public Laptop(String brand, String model, OperationSystem os, String bodyMaterial, Color color) {
+    public Laptop(Brands brand, String model, OperationSystem os, String bodyMaterial, Colors color) {
         setBrandAndModel(brand, model);
         setOS(os);
         setMaterialAndColor(bodyMaterial, color);
         generateUniqId();
     }
 
-    public Laptop(String brand, String model, Integer releazeYear, OperationSystem os, String bodyMaterial,
-            Color color) {
+    public Laptop(Brands brand, String model, Integer releazeYear, OperationSystem os, String bodyMaterial,
+            Colors color) {
         setBrandAndModel(brand, model);
         setReleaseYear(releazeYear);
         setOS(os);
@@ -59,7 +60,7 @@ public class Laptop {
         Id = UniqId;
     }
 
-    public void setBrandAndModel(String brand, String model) {
+    public void setBrandAndModel(Brands brand, String model) {
         Brand = brand;
         Model = model;
     }
@@ -72,7 +73,7 @@ public class Laptop {
         OS = os;
     }
 
-    public void setMaterialAndColor(String bodyMaterial, Color color) {
+    public void setMaterialAndColor(String bodyMaterial, Colors color) {
         BodyMaterial = bodyMaterial;
         Color = color;
     }
@@ -131,7 +132,7 @@ public class Laptop {
         return Id;
     }
 
-    public String getBrand() {
+    public Brands getBrand() {
         return Brand;
     }
 
@@ -151,7 +152,7 @@ public class Laptop {
         return BodyMaterial;
     }
 
-    public Color getColor() {
+    public Colors getColor() {
         return Color;
     }
 
