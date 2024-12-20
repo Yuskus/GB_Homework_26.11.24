@@ -2,6 +2,7 @@ package lesson6.task1.Objects.Parts.Structures;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public enum BatteryTypes {
     UNKNOWN(0),
@@ -27,5 +28,12 @@ public enum BatteryTypes {
 
     public static BatteryTypes valueOf(int val) {
         return (BatteryTypes) map.get(val);
+    }
+
+    public static void print() {
+        System.out.println("BatteryTypes: ");
+        for (Entry<Integer, BatteryTypes> item : map.entrySet()) {
+            System.out.println("Key [" + item.getKey() + "] has value: " + item.getValue());
+        }
     }
 }

@@ -215,7 +215,8 @@ public class Laptop {
     public String toString() {
         StringBuilder sb = new StringBuilder();
 
-        sb.append("Brand: ").append(Brand);
+        sb.append("LAPTOP ID: ").append(Id);
+        sb.append(", Brand: ").append(Brand);
         sb.append(", Model: ").append(Model);
 
         if (ReleaseYear != null)

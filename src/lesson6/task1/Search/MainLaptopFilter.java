@@ -1,36 +1,33 @@
 package lesson6.task1.Search;
 
-import lesson6.task1.Objects.Laptop;
+import java.util.stream.Collectors;
 import lesson6.task1.Objects.LaptopCollection;
 import lesson6.task1.Objects.Parts.Structures.Brands;
 import lesson6.task1.Objects.Parts.Structures.Colors;
 import lesson6.task1.Objects.Parts.Structures.OperationSystem;
 
 public class MainLaptopFilter {
-    public static LaptopCollection SearchingByBrand(LaptopCollection collection, Brands Brand) {
-        LaptopCollection result = new LaptopCollection();
-        for (Laptop lap : collection.getCopy()) {
-            if (lap.getBrand() == Brand)
-                result.add(lap);
-        }
-        return result;
+    public static void SearchingByBrand(LaptopCollection collection, Brands Brand) {
+        collection.set(collection
+                .get()
+                .stream()
+                .filter(s -> s.getBrand() == Brand)
+                .collect(Collectors.toSet()));
     }
 
-    public static LaptopCollection SearchingByOS(LaptopCollection collection, OperationSystem OS) {
-        LaptopCollection result = new LaptopCollection();
-        for (Laptop lap : collection.getCopy()) {
-            if (lap.getOS() == OS)
-                result.add(lap);
-        }
-        return result;
+    public static void SearchingByOS(LaptopCollection collection, OperationSystem OS) {
+        collection.set(collection
+                .get()
+                .stream()
+                .filter(s -> s.getOS() == OS)
+                .collect(Collectors.toSet()));
     }
 
-    public static LaptopCollection SearchingByColor(LaptopCollection collection, Colors color) {
-        LaptopCollection result = new LaptopCollection();
-        for (Laptop lap : collection.getCopy()) {
-            if (lap.getColor() == color)
-                result.add(lap);
-        }
-        return result;
+    public static void SearchingByColor(LaptopCollection collection, Colors color) {
+        collection.set(collection
+                .get()
+                .stream()
+                .filter(s -> s.getColor() == color)
+                .collect(Collectors.toSet()));
     }
 }

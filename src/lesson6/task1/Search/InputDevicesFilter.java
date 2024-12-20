@@ -1,15 +1,14 @@
 package lesson6.task1.Search;
 
-import lesson6.task1.Objects.Laptop;
+import java.util.stream.Collectors;
 import lesson6.task1.Objects.LaptopCollection;
 
 public class InputDevicesFilter {
-    public static LaptopCollection SearchingByNumPad(LaptopCollection collection, boolean IsNumPad) {
-        LaptopCollection result = new LaptopCollection();
-        for (Laptop lap : collection.getCopy()) {
-            if (lap.getInputDevices().getIsNumPad() == IsNumPad)
-                result.add(lap);
-        }
-        return result;
+    public static void SearchingByNumPad(LaptopCollection collection, boolean IsNumPad) {
+        collection.set(collection
+                .get()
+                .stream()
+                .filter(s -> s.getInputDevices().getIsNumPad() == IsNumPad)
+                .collect(Collectors.toSet()));
     }
 }

@@ -1,24 +1,22 @@
 package lesson6.task1.Search;
 
-import lesson6.task1.Objects.Laptop;
+import java.util.stream.Collectors;
 import lesson6.task1.Objects.LaptopCollection;
 
 public class MemoryFilter {
-    public static LaptopCollection SearchingByRam(LaptopCollection collection, Integer minRAM) {
-        LaptopCollection result = new LaptopCollection();
-        for (Laptop lap : collection.getCopy()) {
-            if (lap.getMemory().getRAM() >= minRAM)
-                result.add(lap);
-        }
-        return result;
+    public static void SearchingByRam(LaptopCollection collection, Integer minRAM) {
+        collection.set(collection
+                .get()
+                .stream()
+                .filter(s -> s.getMemory().getRAM() >= minRAM)
+                .collect(Collectors.toSet()));
     }
 
-    public static LaptopCollection SearchingByRom(LaptopCollection collection, Integer minROM) {
-        LaptopCollection result = new LaptopCollection();
-        for (Laptop lap : collection.getCopy()) {
-            if (lap.getMemory().getROM() >= minROM)
-                result.add(lap);
-        }
-        return result;
+    public static void SearchingByRom(LaptopCollection collection, Integer minROM) {
+        collection.set(collection
+                .get()
+                .stream()
+                .filter(s -> s.getMemory().getROM() >= minROM)
+                .collect(Collectors.toSet()));
     }
 }

@@ -2,6 +2,7 @@ package lesson6.task1.Objects.Parts.Structures;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public enum OperationSystem {
     NONE(0),
@@ -32,5 +33,12 @@ public enum OperationSystem {
 
     public static OperationSystem valueOf(int val) {
         return (OperationSystem) map.get(val);
+    }
+
+    public static void print() {
+        System.out.println("OperationSystem: ");
+        for (Entry<Integer, OperationSystem> item : map.entrySet()) {
+            System.out.println("Key [" + item.getKey() + "] has value: " + item.getValue());
+        }
     }
 }

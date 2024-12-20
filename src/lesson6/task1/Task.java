@@ -23,12 +23,19 @@ import lesson6.task1.Search.Filter;
 
 public class Task {
     public static void main(String[] args) {
+        // creating initializator
         CollectionInitialization initializator = new CollectionInitialization();
+
+        // initializing a collection by adding 8 laptops
         LaptopCollection collection = initializator.Initialization();
 
+        // creating filter object
         Filter filter = new Filter();
+
+        // start filter (by the way, you can use a few filter criteria)
         filter.startFilter(collection);
 
+        // print collection
         collection.printCollection("Filtred collection: ");
     }
 }

@@ -1,15 +1,14 @@
 package lesson6.task1.Search;
 
-import lesson6.task1.Objects.Laptop;
+import java.util.stream.Collectors;
 import lesson6.task1.Objects.LaptopCollection;
 
 public class CommunicationFilter {
-    public static LaptopCollection SearchingByBluetooth(LaptopCollection collection, Float minBluetoothVersion) {
-        LaptopCollection result = new LaptopCollection();
-        for (Laptop lap : collection.getCopy()) {
-            if (lap.getCommunication().getBluetoothVersion() >= minBluetoothVersion)
-                result.add(lap);
-        }
-        return result;
+    public static void SearchingByBluetooth(LaptopCollection collection, Float minBluetoothVersion) {
+        collection.set(collection
+                .get()
+                .stream()
+                .filter(s -> s.getCommunication().getBluetoothVersion() >= minBluetoothVersion)
+                .collect(Collectors.toSet()));
     }
 }

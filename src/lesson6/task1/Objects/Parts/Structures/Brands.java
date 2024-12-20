@@ -2,6 +2,7 @@ package lesson6.task1.Objects.Parts.Structures;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public enum Brands {
     UNKNOWN(0),
@@ -34,5 +35,12 @@ public enum Brands {
 
     public static Brands valueOf(int val) {
         return (Brands) map.get(val);
+    }
+
+    public static void print() {
+        System.out.println("Brands: ");
+        for (Entry<Integer, Brands> item : map.entrySet()) {
+            System.out.println("Key [" + item.getKey() + "] has value: " + item.getValue());
+        }
     }
 }

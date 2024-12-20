@@ -2,6 +2,7 @@ package lesson6.task1.Objects.Parts.Structures;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public enum Slots {
     USB_2_0_TypeA(0),
@@ -33,5 +34,12 @@ public enum Slots {
 
     public static Slots valueOf(int val) {
         return (Slots) map.get(val);
+    }
+
+    public static void print() {
+        System.out.println("Slots: ");
+        for (Entry<Integer, Slots> item : map.entrySet()) {
+            System.out.println("Key [" + item.getKey() + "] has value: " + item.getValue());
+        }
     }
 }

@@ -2,6 +2,7 @@ package lesson6.task1.Objects.Parts.Structures;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public enum KeyboardLanguages {
     EN(0),
@@ -26,5 +27,12 @@ public enum KeyboardLanguages {
 
     public static KeyboardLanguages valueOf(int val) {
         return (KeyboardLanguages) map.get(val);
+    }
+
+    public static void print() {
+        System.out.println("KeyboardLanguages: ");
+        for (Entry<Integer, KeyboardLanguages> item : map.entrySet()) {
+            System.out.println("Key [" + item.getKey() + "] has value: " + item.getValue());
+        }
     }
 }

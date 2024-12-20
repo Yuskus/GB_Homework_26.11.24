@@ -64,6 +64,6 @@ public class MemoryInfo {
         if (ROMType != null)
             sb.append(", Type: ").append(ROMType);
 
-        return super.toString();
+        return sb.toString();
     }
 }
