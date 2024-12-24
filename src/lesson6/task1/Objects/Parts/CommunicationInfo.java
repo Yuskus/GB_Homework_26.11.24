@@ -1,9 +1,9 @@
 package lesson6.task1.Objects.Parts;
 
 public class CommunicationInfo {
-    private boolean IsWiFi = false;
+    private boolean IsWiFi;
     private String WiFiType;
-    private boolean IsBluetooth = false;
+    private boolean IsBluetooth;
     private Float BluetoothVersion;
 
     public CommunicationInfo() {
@@ -11,20 +11,26 @@ public class CommunicationInfo {
     }
 
     public CommunicationInfo(String wiFiType) {
-        WiFiType = wiFiType;
-        IsWiFi = true;
+        setWiFiType(wiFiType);
     }
 
     public CommunicationInfo(Float bluetoothVersion) {
-        BluetoothVersion = bluetoothVersion;
-        IsBluetooth = true;
+        setBluetoothVersion(bluetoothVersion);
     }
 
     public CommunicationInfo(String wiFiType, Float bluetoothVersion) {
-        WiFiType = wiFiType;
-        IsWiFi = true;
+        setWiFiType(wiFiType);
+        setBluetoothVersion(bluetoothVersion);
+    }
+
+    private void setBluetoothVersion(Float bluetoothVersion) {
         BluetoothVersion = bluetoothVersion;
-        IsBluetooth = true;
+        IsBluetooth = bluetoothVersion != null;
+    }
+
+    private void setWiFiType(String wiFiType) {
+        WiFiType = wiFiType;
+        IsWiFi = wiFiType != null;
     }
 
     public boolean getIsWiFi() {

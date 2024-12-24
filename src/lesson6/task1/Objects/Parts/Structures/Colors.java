@@ -5,9 +5,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public enum Colors {
-    BLACK(0),
-    BLUE(1),
-    GRAY(2);
+    UNKNOWN(0),
+    BLACK(1),
+    BLUE(2),
+    GRAY(3);
 
     private final int value;
     private static Map<Integer, Colors> map = new HashMap<>();

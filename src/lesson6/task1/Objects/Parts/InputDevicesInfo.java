@@ -4,27 +4,23 @@ import lesson6.task1.Objects.Parts.Structures.Colors;
 import lesson6.task1.Objects.Parts.Structures.KeyboardLanguages;
 
 public class InputDevicesInfo {
-    private KeyboardLanguages Language = KeyboardLanguages.EN;
+    private KeyboardLanguages Language;
     private Colors KeyboardColor;
-    private boolean IsNumPad = false;
-    private boolean IsTouchpad = false;
-    private boolean IsKeyBacklight = false;
-    private boolean IsFingerprint = false;
+    private boolean IsNumPad;
+    private boolean IsTouchpad;
+    private boolean IsKeyBacklight;
+    private boolean IsFingerprint;
 
     public InputDevicesInfo(Colors keyboardColor) {
-        KeyboardColor = keyboardColor;
+        this(keyboardColor, KeyboardLanguages.EN, false, false, false, false);
     }
 
     public InputDevicesInfo(Colors keyboardColor, KeyboardLanguages language) {
-        KeyboardColor = keyboardColor;
-        Language = language;
+        this(keyboardColor, language, false, false, false, false);
     }
 
     public InputDevicesInfo(Colors keyboardColor, KeyboardLanguages language, boolean isNumPad, boolean isTouchpad) {
-        KeyboardColor = keyboardColor;
-        Language = language;
-        IsNumPad = isNumPad;
-        IsTouchpad = isTouchpad;
+        this(keyboardColor, language, isNumPad, isTouchpad, false, false);
     }
 
     public InputDevicesInfo(Colors keyboardColor, KeyboardLanguages language, boolean isNumPad, boolean isTouchpad,

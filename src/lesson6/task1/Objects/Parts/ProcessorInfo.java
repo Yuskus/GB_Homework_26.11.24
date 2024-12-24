@@ -18,28 +18,17 @@ public class ProcessorInfo {
     }
 
     public ProcessorInfo(Brands brand, String model, Integer allCores) {
-        Brand = brand;
-        Model = model;
+        this(brand, model);
         AllCores = allCores;
     }
 
     public ProcessorInfo(Brands brand, String model, Integer allCores, Float middleFrequency, Float maxFrequency) {
-        Brand = brand;
-        Model = model;
-        AllCores = allCores;
-        MiddleFrequency = middleFrequency;
-        MaxFrequency = maxFrequency;
+        this(brand, model, allCores, middleFrequency, maxFrequency, null, null, null);
     }
 
     public ProcessorInfo(Brands brand, String model, Integer allCores, Float middleFrequency, Float maxFrequency,
             Integer energyEfficientCores, Integer highPerformanceCores) {
-        Brand = brand;
-        Model = model;
-        AllCores = allCores;
-        MiddleFrequency = middleFrequency;
-        MaxFrequency = maxFrequency;
-        EnergyEfficientCores = energyEfficientCores;
-        HighPerformanceCores = highPerformanceCores;
+        this(brand, model, allCores, middleFrequency, maxFrequency, energyEfficientCores, highPerformanceCores, null);
     }
 
     public ProcessorInfo(Brands brand, String model, Integer allCores, Float middleFrequency, Float maxFrequency,

@@ -7,7 +7,7 @@ public class GraphicProcessorInfo {
     private String Model;
 
     public GraphicProcessorInfo() {
-
+        Brand = Brands.UNKNOWN;
     }
 
     public GraphicProcessorInfo(Brands brand) {

@@ -5,15 +5,14 @@ import lesson6.task1.Objects.Parts.Structures.BatteryTypes;
 public class BatteryInfo {
     private BatteryTypes Type;
     private Integer PowerWH;
-    private boolean IsSpeedCharge = false;
+    private boolean IsSpeedCharge;
 
     public BatteryInfo() {
-
+        Type = BatteryTypes.UNKNOWN;
     }
 
     public BatteryInfo(BatteryTypes type, Integer powerWH) {
-        Type = type;
-        PowerWH = powerWH;
+        this(type, powerWH, false);
     }
 
     public BatteryInfo(BatteryTypes type, Integer powerWH, boolean isSpeedCharge) {

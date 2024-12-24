@@ -1,11 +1,11 @@
 package lesson6.task1.Objects.Parts;
 
 public class MultimediaInfo {
-    private boolean IsWebCam = false;
+    private boolean IsWebCam;
     private Float WebCamMP;
-    private boolean IsSpeakers = false;
-    private boolean IsSpeakersStereo = false;
-    private Integer MicCount = 0;
+    private boolean IsSpeakers;
+    private boolean IsSpeakersStereo;
+    private Integer MicCount;
 
     public MultimediaInfo(boolean isWebCam, boolean isSpeakers) {
         IsWebCam = isWebCam;
@@ -13,21 +13,13 @@ public class MultimediaInfo {
     }
 
     public MultimediaInfo(Float webCamMP, boolean isSpeakers) {
+        this(webCamMP != null, isSpeakers);
         WebCamMP = webCamMP;
-        IsWebCam = true;
-    }
-
-    public MultimediaInfo(Float webCamMP, boolean isSpeakers, boolean isSpeakersStereo) {
-        WebCamMP = webCamMP;
-        IsWebCam = true;
-        IsSpeakers = isSpeakers;
-        IsSpeakersStereo = isSpeakersStereo;
     }
 
     public MultimediaInfo(Float webCamMP, boolean isSpeakersStereo, Integer micCount) {
+        this(webCamMP != null, true);
         WebCamMP = webCamMP;
-        IsWebCam = true;
-        IsSpeakers = true;
         IsSpeakersStereo = isSpeakersStereo;
         MicCount = micCount;
     }

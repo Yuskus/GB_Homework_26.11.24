@@ -8,14 +8,11 @@ public class MemoryInfo {
     private String ROMType;
 
     public MemoryInfo(Integer ram, Integer rom) {
-        RAM = ram;
-        ROM = rom;
+        this(ram, rom, null, false, false);
     }
 
     public MemoryInfo(Integer ram, Integer rom, String romType) {
-        RAM = ram;
-        ROM = rom;
-        ROMType = romType;
+        this(ram, rom, romType, false, false);
     }
 
     public MemoryInfo(Integer ram, Integer rom, String romType, boolean canUpgradeRAM, boolean canUpgradeROM) {

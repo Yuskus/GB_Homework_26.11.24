@@ -13,19 +13,15 @@ public class SizeInfo {
     }
 
     public SizeInfo(Vector3 volumeNetto, Float weigthNetto) {
-        VolumeNetto = volumeNetto;
-        WeigthNetto = weigthNetto;
+        this(volumeNetto, weigthNetto, null, null);
     }
 
     public SizeInfo(Vector3 volumeNetto, Vector3 volumeBrutto) {
-        VolumeNetto = volumeNetto;
-        VolumeBrutto = volumeBrutto;
+        this(volumeNetto, null, volumeBrutto, null);
     }
 
     public SizeInfo(Vector3 volumeNetto, Float weigthNetto, Vector3 volumeBrutto) {
-        VolumeNetto = volumeNetto;
-        WeigthNetto = weigthNetto;
-        VolumeBrutto = volumeBrutto;
+        this(volumeNetto, weigthNetto, volumeBrutto, null);
     }
 
     public SizeInfo(Vector3 volumeNetto, Float weigthNetto, Vector3 volumeBrutto, Float weigthBrutto) {

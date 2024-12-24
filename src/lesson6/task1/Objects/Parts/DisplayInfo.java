@@ -7,30 +7,18 @@ public class DisplayInfo {
     private Integer PPI;
     private String Matrix;
     private Integer RefreshRateHz;
-    private boolean IsSurfaceMatte = true;
+    private boolean IsSurfaceMatte;
 
     public DisplayInfo(Float diagonal, Integer heigthPx, Integer weigthPx) {
-        Diagonal = diagonal;
-        HeigthPx = heigthPx;
-        WeigthPx = weigthPx;
-        PPI = CountPPI(diagonal, heigthPx, weigthPx);
+        this(diagonal, heigthPx, weigthPx, null, null, true);
     }
 
     public DisplayInfo(Float diagonal, Integer heigthPx, Integer weigthPx, String matrix) {
-        Diagonal = diagonal;
-        HeigthPx = heigthPx;
-        WeigthPx = weigthPx;
-        PPI = CountPPI(diagonal, heigthPx, weigthPx);
-        Matrix = matrix;
+        this(diagonal, heigthPx, weigthPx, matrix, null, true);
     }
 
     public DisplayInfo(Float diagonal, Integer heigthPx, Integer weigthPx, String matrix, Integer refreshRateHz) {
-        Diagonal = diagonal;
-        HeigthPx = heigthPx;
-        WeigthPx = weigthPx;
-        PPI = CountPPI(diagonal, heigthPx, weigthPx);
-        Matrix = matrix;
-        RefreshRateHz = refreshRateHz;
+        this(diagonal, heigthPx, weigthPx, matrix, refreshRateHz, true);
     }
 
     public DisplayInfo(Float diagonal, Integer heigthPx, Integer weigthPx, String matrix, Integer refreshRateHz,

@@ -29,21 +29,15 @@ public class Laptop {
     private List<Slots> SlotsInfo = new ArrayList<>();
 
     public Laptop(Brands brand, String model) {
-        setBrandAndModel(brand, model);
-        generateUniqId();
+        this(brand, model, null, OperationSystem.NONE, null, Colors.UNKNOWN);
     }
 
     public Laptop(Brands brand, String model, OperationSystem os) {
-        setBrandAndModel(brand, model);
-        setOS(os);
-        generateUniqId();
+        this(brand, model, null, os, null, Colors.UNKNOWN);
     }
 
     public Laptop(Brands brand, String model, OperationSystem os, String bodyMaterial, Colors color) {
-        setBrandAndModel(brand, model);
-        setOS(os);
-        setMaterialAndColor(bodyMaterial, color);
-        generateUniqId();
+        this(brand, model, null, os, bodyMaterial, color);
     }
 
     public Laptop(Brands brand, String model, Integer releazeYear, OperationSystem os, String bodyMaterial,
